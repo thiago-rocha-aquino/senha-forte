@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de senhas</h1>
+        <p class="subtitle">Gere senhas únicas e fortes</p>
+
+        <div class="password-container">
+            <input type="text" id="passwordOutput" readonly>
+            <button id="copyButton" class="copy-button">
+                Copiar
+            </button>
+        </div>
+
+        <div class="button-group">
+            <button id="randomButton" class="primary-button">Random</button>
+            <button id="memorableButton" class="secondary-button">Memorable</button>
+        </div>
+
+        <button id="generateButton" class="generate-button">Gerar novamente</button>
+
+        <div class="password-length">
+            <span id="lengthDisplay">18 caracteres</span>
+            <input type="range" id="lengthSlider" min="8" max="32" value="18">
+        </div>
+
+        <div class="options">
+            <div class="option">
+                <label>
+                    <input type="checkbox" id="uppercaseCheck" checked>
+                    Palavras maiúsculas
+                </label>
+                <span class="sample">ABC</span>
+            </div>
+            <div class="option">
+                <label>
+                    <input type="checkbox" id="numbersCheck" checked>
+                    Números
+                </label>
+                <span class="sample">123</span>
+            </div>
+            <div class="option">
+                <label>
+                    <input type="checkbox" id="symbolsCheck" checked>
+                    Símbolos
+                </label>
+                <span class="sample">!@#</span>
+            </div>
+        </div>
+
+        <div class="strength-meter">
+            <div class="strength-label">Classificação de segurança</div>
+            <div class="strength-indicator">
+                <div class="strength-bar"></div>
+            </div>
+        </div>
+    </div>
+        <script src="./utils/passwordGenerator.js"></script>
+    <script src="./validators/passwordValidator.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
